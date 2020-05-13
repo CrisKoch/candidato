@@ -7,7 +7,8 @@ public class candidato {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int esc;
+		int esc, exp;
+		char viag, hab;
 		
 		System.out.println("Qual sua escolaridade?");
 		System.out.println("1) Ensino Fundamental");
@@ -17,6 +18,14 @@ public class candidato {
 		System.out.print("Digite uma opção: ");
 		
 		esc = sc.nextInt();
+		
+		System.out.println();
+		System.out.println("Você tem quantos anos de experiência profissional?");
+		exp = sc.nextInt();
+		System.out.println("Você tem disponibilidade para viajar (S/N)?");
+		viag = sc.next().charAt(0);
+		System.out.println("Você tem habilitação de motorista (S/N)?");
+		hab = sc.next().charAt(0);
 		
 		
 		
