@@ -27,9 +27,36 @@ public class candidato {
 		System.out.println("Você tem habilitação de motorista (S/N)?");
 		hab = sc.next().charAt(0);
 		
+		// Cálculos
+		if (esc == 1) {
+			esc = 10;
+			}
+			else if (esc == 2) {
+			esc = 20;
+			}
+			else if (esc == 3) {
+			esc = 30;
+			}
+			else {
+			esc = 40;
+			}
+		
+		if (exp == 0) {
+			exp = 0;
+		}
+			else if(exp <= 2) {
+				exp = 10;
+			}
+			else if( exp > 2 && exp <=5 ) {
+				exp = 20;
+			}
+			else if( exp > 5) {
+				exp = 40;
+			}
 		
 		
-		
+		System.out.println("Pontos por escolaridade: " + esc);
+		System.out.println("Pontos por experiência: " + exp);
 		
 		
 		sc.close();
