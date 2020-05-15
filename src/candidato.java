@@ -8,7 +8,7 @@ public class candidato {
 		Scanner sc = new Scanner(System.in);
 		
 		int esc, exp;
-		char viag, hab;
+		char viag, hab, cargo;
 		
 		System.out.println("Qual sua escolaridade?");
 		System.out.println("1) Ensino Fundamental");
@@ -54,10 +54,44 @@ public class candidato {
 				exp = 40;
 			}
 		
+		// escolaridade e experiencia
 		
 		System.out.println("Pontos por escolaridade: " + esc);
 		System.out.println("Pontos por experiência: " + exp);
+		System.out.println();
 		
+		//Resultado final
+		
+		if(exp >= 40 && esc >= 30 && viag == 's' && hab == 's') {
+			System.out.println("Você está habilitado para o(s) seguinte(s) cargo(s):");
+			System.out.println("ASSISTENTE");
+			System.out.println("GERENTE");
+			System.out.println("ANALISTA");
+		}
+		else if(exp >= 40 && esc >= 30 && viag == 's' && hab == 'n') {
+			System.out.println("Você está habilitado para o(s) seguinte(s) cargo(s):");
+			System.out.println("GERENTE");
+			System.out.println("ANALISTA");
+		}
+		else if(exp >= 20 && esc >= 30 ) {
+			System.out.println("Você está habilitado para o(s) seguinte(s) cargo(s):");
+			System.out.println("GERENTE");
+		}
+		else if(exp >= 20 && esc >= 30 && hab == 's') {
+			System.out.println("Você está habilitado para o(s) seguinte(s) cargo(s):");
+			System.out.println("ASSISTENTE");
+			System.out.println("GERENTE");
+		}
+		else if(esc >= 20 && hab == 's') {
+			System.out.println("Você está habilitado para o(s) seguinte(s) cargo(s):");
+			System.out.println("ASSISTENTE");
+		}
+			
+		else {
+			System.out.println("Infelizmente seu perfil não atende a empresa");
+		}
+			
+
 		
 		sc.close();
 	}
